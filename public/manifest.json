@@ -1,0 +1,8 @@
+{
+  "short_name": "EKIPA",
+  "name": "Sprawdź co nowego u EKIPY !",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
