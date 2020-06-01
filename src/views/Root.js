@@ -12,7 +12,6 @@ import MainView from './MainView';
 const Root = () => {
 
   const [newestVideo='',setNewestVideo] = useState();
-  
   return (
     <MyContext.Provider value={{newestVideo,setNewestVideo}}>
       <Router>

@@ -3,7 +3,6 @@ import GallerySlider from '../components/molecules/GallerySlider'
 import VideoList from '../components/organisms/VideoList'
 import {getMainVideos} from '../helpers/getMainVideos';
 import { names, channelsId} from '../helpers/data';
-import {_APIkey} from '../helpers/apiKey';
 import MyContext from '../context/index'
 import {theme} from '../themes/mainTheme'
 
@@ -13,7 +12,7 @@ const MainView = () => {
     const {whom} = theme;
     useEffect( ()=> {
         names.forEach(name => 
-            getMainVideos(_APIkey,channelsId[name],videos,setVideos) );
+            getMainVideos(process.env.REACT_APP_API_KEY,channelsId[name],videos,setVideos) );
             // eslint-disable-next-line
     },[])
 

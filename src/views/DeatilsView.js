@@ -8,7 +8,6 @@ import VideoList from '../components/organisms/VideoList';
 import {getCurrentInfo} from '../helpers/getCurrentInfo';
 import {getCurrentVideos} from '../helpers/getCurrentVideos';
 import {channelsId} from '../helpers/data';
-import {_APIkey} from '../helpers/apiKey';
 import {theme} from '../themes/mainTheme'
 
 const Wrapper = styled.div`
@@ -29,8 +28,8 @@ const DetailsView = ({match}) => {
    
 
     useEffect( ()=> {
-         getCurrentInfo(_APIkey,channelsId[currentPerson],setInfo);
-         getCurrentVideos(_APIkey,channelsId[currentPerson],setVideos);
+         getCurrentInfo(process.env.REACT_APP_API_KEY,channelsId[currentPerson],setInfo);
+         getCurrentVideos(process.env.REACT_APP_API_KEY,channelsId[currentPerson],setVideos);
     },[currentPerson])
 
     return(
